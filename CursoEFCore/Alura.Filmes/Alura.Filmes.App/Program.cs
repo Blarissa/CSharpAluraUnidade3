@@ -1,6 +1,9 @@
 ﻿using Alura.Filmes.App.Dados;
 using Alura.Filmes.App.Extensions;
+using Alura.Filmes.App.Negocio;
+using Microsoft.EntityFrameworkCore;
 using System;
+using System.Linq;
 
 namespace Alura.Filmes.App
 {
@@ -12,10 +15,18 @@ namespace Alura.Filmes.App
             {
                 contexto.LogSQLToConsole();
 
-                foreach (var ator in contexto.Atores)
-                {
-                    Console.WriteLine(ator);
-                }
+                var atores = contexto.Atores
+                    .OrderByDescending(a => EF.Property<DateTime>(a ,"last_update"))
+                    .Take(10).ToList();
+
+                var ator = new Ator();
+
+                atores.ForEach(a => 
+                    Console.WriteLine(a 
+                        + " - " 
+                        + contexto.Entry(ator)
+                            .Property("last_update")
+                            .CurrentValue));                                                
             }
 
             Console.ReadLine();
