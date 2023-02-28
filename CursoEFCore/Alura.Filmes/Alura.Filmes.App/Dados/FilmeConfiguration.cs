@@ -37,6 +37,17 @@ namespace Alura.Filmes.App.Dados
             builder.Property<DateTime>("last_update")
                 .HasColumnType("datetime")
                 .IsRequired();
+
+            builder.Property<byte>("language_id");
+            builder.Property<byte?>("original_language_id");
+
+            builder.HasOne(f => f.IdiomaFalado)
+                .WithMany(i => i.FilmesFalados)
+                .HasForeignKey("language_id");
+
+            builder.HasOne(f => f.IdiomaOriginal)
+                .WithMany(i => i.FilmesOriginais)
+                .HasForeignKey("original_language_id");
         }
     }
 }
