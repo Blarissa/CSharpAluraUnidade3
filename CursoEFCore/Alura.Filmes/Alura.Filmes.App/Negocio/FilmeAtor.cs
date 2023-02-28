@@ -10,6 +10,5 @@ namespace Alura.Filmes.App.Negocio
     {
         public Filme Filme { get; set; }
         public Ator Ator { get; set; }
-
     }
 }
