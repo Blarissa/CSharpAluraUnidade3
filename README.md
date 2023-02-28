@@ -15,6 +15,12 @@
 
 ### Mapeando um banco pré-existente
 
+- Configurando nomes de tabelas e colunas 
+- Refinando o mapeamento da tabela de atores
+- Colunas que não existem na camada de negócio
+- Mapeando filmes
+- Relacionando filmes a atores
+- Incluindo a tabela de idiomas no projeto
 - Concluindo o mapeamento da tabelas de atores 
 - Classificação indicativa de filmes
 - Lidando com enumerados
