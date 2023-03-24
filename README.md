@@ -13,7 +13,7 @@
 - Relacionamentos Um para Um no Entity
 - Recuperando objetos relacionados
 
-### Mapeando um banco pré-existente
+### :heavy_check_mark: Parte 01: Mapeando um banco pré-existente 
 
 - Configurando nomes de tabelas e colunas 
 - Refinando o mapeamento da tabela de atores
@@ -21,6 +21,9 @@
 - Mapeando filmes
 - Relacionando filmes a atores
 - Incluindo a tabela de idiomas no projeto
+
+### Parte 02: Mapeando um banco pré-existente 
+
 - Concluindo o mapeamento da tabelas de atores 
 - Classificação indicativa de filmes
 - Lidando com enumerados
@@ -28,9 +31,7 @@
 - Assumindo o controle da geração do SQL
 - Stored Procedures
 
-## :heavy_check_mark: .NET 6
-
-### Relacionando entidades
+## :heavy_check_mark: .NET 6: Relacionando entidades
 
 - Crescendo o projeto 
 - Relacionamento 1:1
